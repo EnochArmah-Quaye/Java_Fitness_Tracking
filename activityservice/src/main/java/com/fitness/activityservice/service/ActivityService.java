@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ActivityService {
 
-    private ActivityRepository activityRepository;
+    private final ActivityRepository activityRepository;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
         Activity activity = Activity.builder()
